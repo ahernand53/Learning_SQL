@@ -40,3 +40,5 @@ Las llaves foráneas en entidades debiles refieren o apuntan hacia su llave prima
 En el modelo fisico hay que poner el tipo de dato de acuerdo a la base de datos en la que vamos a trabajar.
 
 Los motores de base de datos tienen diferentes implementaciones de los tipos de datos, hay que revisar a que se traducen dependiendo de la base de datos.
+
+Paso 9: Pasar al estándar de la base de datos (SQL)

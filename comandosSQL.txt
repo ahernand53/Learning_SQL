@@ -1,0 +1,2 @@
+create table: crea una tabla.
+alter table: modifica una tabla existente.
