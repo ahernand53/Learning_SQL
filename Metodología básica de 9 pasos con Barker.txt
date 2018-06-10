@@ -41,4 +41,10 @@ En el modelo fisico hay que poner el tipo de dato de acuerdo a la base de datos 
 
 Los motores de base de datos tienen diferentes implementaciones de los tipos de datos, hay que revisar a que se traducen dependiendo de la base de datos.
 
+Entidades pasan a llamarse Tablas.
+Dejamos de usar #, * y º para referinos a llaves primarias, campos obligatorios y opcionales.
+Las relaciones ahora son representadas por flechas.
+La dirección de las flechas apuntan hacía la tabla que origina una llave foránea o sea la tabla que tiene la llave primaria.
+Se definen los tipos de datos, dependiendo del motor SQL (MySQL, SQLServer, MariaDB, PostgreSQL).
+
 Paso 9: Pasar al estándar de la base de datos (SQL)

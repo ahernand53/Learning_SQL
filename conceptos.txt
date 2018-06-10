@@ -154,3 +154,22 @@ Entidades, Relaciones y Atributos.
 Las llaves primarias se identifican con numeral #.
 Campo obligatorio se identifica con un asterisco *.
 Campo opcional se identifica con el indicador ordinalº.
+
+Vamos a tomar lo que hicimos en el diagrama lógico y físico:
+
+El modelo físico nos va a permitir hacer la implementación de código SQL.
+El modelo lógico nos va a recordar cuales son las restricciones que teníamos (constraints).
+En un ambiente de desarrollo al momento de comenzar a trabajar con nuestro modelo de datos para nuestra aplicación, se recomienda al momento crear tablas borrarlas en el caso de que existan con DROP TABLE.
+
+A la hora de estar haciendo pruebas, cuando generamos código SQL, vamos a generar tablas nuevas en nuestra base de datos, si por error creamos una tabla o ya existe una tabla al momento de aplicar nuestros cambios se pueden generar inconsistencias.
+
+Dependiendo del motor de bases de datos, podemos sobre-escribir la estructura o no en el momento de que ya exista una tabla con ciertos atributos.
+
+Estas tablas se van a borrar en el orden de la tabla que tenga menos relaciones con otras tablas (estas relaciones se van a romper o borrar).
+
+Quitar tablas al comienzo no se debe utilizar en ambientes de producción al momento de crear tablas nuevas, si se hace se pueden dañar las dependencias de las tablas.
+
+Un poco de Sintaxis:
+
+Las lineas de código terminan en punto y coma ;.
+Los comentarios en SQL se manejan con /Comentarios/
