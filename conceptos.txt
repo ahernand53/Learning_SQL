@@ -147,3 +147,10 @@ Consistencia: Aseguro que tengo un estado válido y pasó a otro estado que sigue 
 Aislamiento: Esta propiedad asegura que una operación no puede afectar a otras. Esto asegura que la realización de dos transacciones sobre la misma información sean independientes y no generen ningún tipo de error. Esta propiedad define cómo y cuándo los cambios producidos por una operación se hacen visibles para las demás operaciones concurrentes. El aislamiento puede alcanzarse en distintos niveles, siendo el parámetro esencial a la hora de seleccionar SGBDs.
 
 Durabilidad: (Persistencia). Esta propiedad asegura que una vez realizada la operación, ésta persistirá y no se podrá deshacer aunque falle el sistema y que de esta forma los datos sobrevivan de alguna manera.
+
+¿Que vamos a tener en cuenta para tener nuestro diagrama final?
+Entidades, Relaciones y Atributos.
+
+Las llaves primarias se identifican con numeral #.
+Campo obligatorio se identifica con un asterisco *.
+Campo opcional se identifica con el indicador ordinalº.
