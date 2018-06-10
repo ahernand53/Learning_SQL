@@ -173,3 +173,32 @@ Un poco de Sintaxis:
 
 Las lineas de código terminan en punto y coma ;.
 Los comentarios en SQL se manejan con /Comentarios/
+
+----------------------DEPENDENCIAS FUNCIONALES---------------------------
+
+¿Cual es la diferencia entre mi Excel y mis Bases de Datos?
+El excel es una tabla plana con filas y columnas, podemos manejar la data histórica y registros, sin embargo tenemos una sola tabla.
+
+En una base de datos tenemos varias tablas con un lenguaje estructurado, ademas contamos con la normalización esta nos ayuda a no redundar en la información, o sea, tener datos repetidos, fallas con diferentes escrituras (México, Mexico (sin acento), Ciudad de México, CDMX).
+
+Para comenzar a hablar de normalización antes tenemos que tocar el tema de Propiedades de Dependencia Funcional, estas ayudan a entender como vamos a cambiar la estructura de la base de datos y se dividen en tres niveles:
+
+Dependencia funcional reflexiva, si tenemos un dato a, podemos llegar a un dato b, dentro de la misma tabla, siendo así que. Teniendo un identificador vamos a poder llegar a los otros datos como método y dirección en la misma tabla.
+Dependencia funcional aumentativa, ademas de poder llegar de un dato a a un dato b, vamos a poder llegar de un dato a a un dato c y de un dato b a un dato c. O sea que vamos a poder acceder a los datos de otras tablas relacionadas con llaves foráneas. En esta consulta vamos a generar tuplas, teniendo un identificador y un código, vamos a traer la dirección y la fecha, tenemos un ID (1) y un código (123) y con esa clave que tenemos podemos traer mas datos.
+Dependencia funcional transitiva, Teniendo una tabla X la cual se comunica con la tabla Y y esta ultima se comunica con la tabla Z. De tal manera que X va a poder llegar a Z. Así podriamos hacer una consulta de la Tabla Pasajero que se conecta con la Tabla Ruta y ruta se conecta con la Tabla Aerolinea. Así sabemos los pasajeros que tomaron cierta ruta y en que aerolinea.
+
+Existen 5 formas de normalización, aunque inicialmente eran solamente 3.
+
+La primera forma normal es la base de todas, sin esta no podríamos tener la siguiente (la segunda contiene la primera), y así sucesivamente hasta la quinta forma normal.
+
+Estas formas normales no necesariamente son las mas utilizadas, generalmente uno llega hasta la tercera forma normal (la tradicional). Las otras formas se requieren cuando se necesita un nivel de detalle mas grande o cuando una base de datos no va a crecer tanto ya que por ejemplo con una base de datos de 1200 tablas las ultimas formas normales se vuelven inmanejables.
+
+La forma de entender la primera forma normal es con el principio de atomicidad, el valor tiene que ser el mínimo posible, aquí ya no hablamos de un conjunto de pasos o transacciones, mas bien el valor como tal mínimo posible.
+
+Por ejemplo en el atributo Nombre, el cual contiene nombres y apellidos, lo podemos segmentar en los atributos Nombre, Segundo Nombre y Apellidos. El Nombre debería ser obligatorio y Segundo Nombre opcional.
+
+Para que se de la primera forma normal es requisito indispensable tener por lo menos una llave primaria.
+
+En 4FN obligatoriamente no podemos repetir datos en una tabla, solo tenemos combinaciones únicas y todas las llaves van a poder ser si o si obligatoriamente llaves primarias.
+
+En 5FN es importante tener 2 tablas que están en 4FN, cada dependencia de union (join) va a estar hecho por claves candidatas y no va puede estar hecho por condiciones que no se vayan a cumplir.
