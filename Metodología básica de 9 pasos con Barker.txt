@@ -1,0 +1,42 @@
+(Paso 1) Identificar Cuáles son las Entidades Resuelven Nuestro Problema
+(Paso 2): Identificación de las Relaciones de las Entidades.
+(Paso 3): Entidades y Relaciones.
+(Paso 4): Asignar Atributos a las Entidades:
+Para hacer un buen ejercicio hay que pensar en:
+
+¿Que atributos voy a necesitar?
+¿Cual va a ser la codificación que voy a utilizar?
+¿Como los voy a trabajar dependiendo del tipo de dato?
+Hasta este punto no nos vamos a fijar en que motor de base de datos vamos a correr.
+
+El tipo de dato va a ser obligatorio o no obligatorio, dando la posibilidad de que sea nulo o no nulo (Null o Not Null en SQL).
+
+Vamos a tener un identificador único de cada tabla, una llave primaria. Mínimo una por tabla.
+
+Para hacer mas fácil las consultas hay que tener una nomenclatura para cada tabla (como AV_ para avión) y así poder referirnos a los atributos que se repiten en varias tablas (como nombre).
+
+Hay que revisar el tipo de dato que vamos a usar, los identificadores se pueden trabajar como serial, así la misma base de datos se va a encargar de que el valor de ese identificador sea único e irrepetible.
+
+Definimos la obligatoriedad de los datos, las llaves primarias tienen que ser obligatorias.
+
+(Paso 5): Generar un diagrama conceptual (entidades, relaciones y atributos).
+Las relaciones siempre se van a hacer en 2 sentidos (A con B y B con A).
+
+(Paso 6): Modelo lógico
+Las relaciones se hacen por medio de entidades débiles, entre las entidades relacionadas, esto es porque no podemos generar muchas llaves foráneas en ambas entidades (fuertes).
+
+En estas entidades debiles se usan ambas llaves primarias de las entidades (fuertes) que tenían relación.
+
+En las entidades debiles no debería haber tipos de datos seriales, estas tendrían que ser integer, ya que las entidades debiles no tienen forma de tener consistencia con esa serialidad.
+
+(Paso 7): Identificar nuevos atributos que generan nuestras entidades débiles.
+
+(Paso 8): Construir el diagrama del modelo físico
+
+Las lineas de las relaciones van a ser lineas rectas, la relación uno a muchos vamos a crear una linea con un sentido que termina en cabeza de flecha. Las lineas 1 a 1 o 0 a 1 se mantienen como antes.
+
+Las llaves foráneas en entidades debiles refieren o apuntan hacia su llave primaria en entidades fuertes.
+
+En el modelo fisico hay que poner el tipo de dato de acuerdo a la base de datos en la que vamos a trabajar.
+
+Los motores de base de datos tienen diferentes implementaciones de los tipos de datos, hay que revisar a que se traducen dependiendo de la base de datos.
