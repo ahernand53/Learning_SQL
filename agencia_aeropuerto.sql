@@ -15,5 +15,6 @@ create table AEROLINEA_PASAJERO
     primary key(PASAJERO_ID, AEROLINEA_ID)
 );
 
+
 alter table AEROLINEA_PASAJERO add constraint FK_AEROLINEA_PASAJERO 
 foreign key (PASAJERO_ID) references PASAJERO (PASAJERO_ID);
