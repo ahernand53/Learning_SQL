@@ -140,3 +140,10 @@ https://www.gliffy.com/
 Vertabelo: su plus está en ser colaborativo, tienes opción de crear una cuenta como estudiante, usando un email con dominio educativo.
 https://www.vertabelo.com/
 Cacoo: me pareció bien interactivo, incluye opciones de revisión de cambios, integración con otras herramientas de productividad y la verdad sus precios no me parecen una locura para lo que ofrece!
+
+Atomicidad: Asegura que yo tenga un conjunto de pasos para llegar a ser una transacción exitosa.
+Consistencia: Aseguro que tengo un estado válido y pasó a otro estado que sigue siendo válido.
+
+Aislamiento: Esta propiedad asegura que una operación no puede afectar a otras. Esto asegura que la realización de dos transacciones sobre la misma información sean independientes y no generen ningún tipo de error. Esta propiedad define cómo y cuándo los cambios producidos por una operación se hacen visibles para las demás operaciones concurrentes. El aislamiento puede alcanzarse en distintos niveles, siendo el parámetro esencial a la hora de seleccionar SGBDs.
+
+Durabilidad: (Persistencia). Esta propiedad asegura que una vez realizada la operación, ésta persistirá y no se podrá deshacer aunque falle el sistema y que de esta forma los datos sobrevivan de alguna manera.
