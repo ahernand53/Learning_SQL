@@ -1,0 +1,7 @@
+SELECT Seleccione.
+count([columna]) Contar los atributos.
+FROM [esquema].[tabla] De la tabla del esquema.
+group by [atributo] Agrupar por columna.
+order by [columna] asc Ordenar de forma ascendente.
+
+show columns from [esquema].[tabla] Mostrar columnas del esquema.
