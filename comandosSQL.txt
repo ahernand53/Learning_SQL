@@ -61,3 +61,11 @@ drop column => se usa para eliminar un atributo de la columna.
 update = actualizar una tabla
 set = dar nuevo titulo o nombre al momento de actualizar. especificandolo poniendolo entre ’ nombre_nuevo’
 where = elegir donde se desea cambiar o hacer el update. where column1 = fila2
+
+insert : Se inserta un nuevo registro 
+Ejm:
+	insert into sakila.film_text values (1001, 'Platzi Serie', 	'Aventura');
+
+delete : Se elimina un registro
+Ejm:
+	delete from sakila.film_text where film_id = 1001;
