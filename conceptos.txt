@@ -231,6 +231,31 @@ S1 mongo1
 S2 mondo2
 
 Mongos : es el nodo central
+
 Las conexiones se hacen mediante protocolo JPA, pero se conectan al nodo central no a los shards (S1, S2)
 
 Existen mongo de de configuración para velar por la relación y tipo de trabajo entre los mongos y los shards
+
+Colecciones : objetos principales de la Base de Datos no relacional
+Donde se pueden guardan información utilizando distintas llaves para acceder a datos
+
+ejm:
+Name : ‘Julieta’
+
+Pero la colección se debe especificarse en una ubicación, en un shard especifico.
+
+La información se puede distribuir en varios shards , esto incluye a que los datos de una colección pueden estar en 2 o mas shards
+
+RAID 1 : Espejo de datos Nodo A es igual que en un Nodo B, se necesita mucha velocidad
+A>A
+A<A
+
+REPLICA : Mediante Replica, asegura alta disponibilidad
+B->B
+
+LOG: para averiguar como estaba la data en un determinado tiempo.
+Log 1 : valor 3
+Log 2: valor 4
+Quiere decir que surgio 1 dato modificado alterando el valor
+
+Snapshots (snaps) : Imagenes de un servidor, cluster, nodo, en un determinado momento. (para luego restaurar o replicar la información en otro ambiente)
