@@ -18,3 +18,12 @@ insert Permite insertar en una table una nueva tupla.
 update Permite actualizar uno o muchos atributos.
 delete Permite eliminar uno o muchos atributos.
 replace Permite reemplazar un atributo.
+
+AS: Permite crear un alias a las consultas.
+p.e. sakila.customer as C
+
+Por lo que al momento de escoger la columna ya no copiamos el nombre completo de la tabla sino solamente C:
+customer.first_name -- > c.first_name
+
+where: Se usa para poner un criterio de búsqueda
+distinct: Permite seleccionar un sólo dato sin traer duplicados
