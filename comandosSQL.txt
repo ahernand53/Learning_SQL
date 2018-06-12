@@ -13,6 +13,22 @@ Nota:Alter aplica para “table, view y procedure”. Alter = Alterar.
 DML: Data Manipulation Language
 
 select Permite seleccionar uno o muchos atributos de una o muchas tablas.
+Ejm:
+	SELECT * from sakila.actor : muestra todos ls atributos de las tabla
+
+SELECT Seleccione.
+count([columna]) Contar los atributos.
+FROM [esquema].[tabla] De la tabla del esquema.
+group by [atributo] Agrupar por columna.
+order by [columna] asc Ordenar de forma ascendente. 
+Ejm:
+	SELECT last_name, count(first_name)
+from sakila.actor group by 	last_name order by count(first_name) desc;
+
+show columns from [esquema].[tabla] Mostrar columnas del esquema.
+Ejm:
+	show columns from sakila.actor;
+
 join Permite combinar registros de dos o más tablas.
 insert Permite insertar en una table una nueva tupla.
 update Permite actualizar uno o muchos atributos.
@@ -27,3 +43,21 @@ customer.first_name -- > c.first_name
 
 where: Se usa para poner un criterio de búsqueda
 distinct: Permite seleccionar un sólo dato sin traer duplicados
+and y or: agregar una condicion secundaria
+Ejm:
+	SELECT C.first_name, C.first_name, A.address, CY.city
+from 	sakila.customer as C, sakila.address as A, sakila.city as CY
+where 	C.address_id = A.address_id and A.city_id = CY.city_id;
+
+like => se usa para buscar algo en concreto, usando caracteres especificos que se desea usar
+like ‘<caracteres>%’ => busca todas las palabras que comiencen con dichos <caracteres>
+like ‘%<caracteres>%’ => busca todas las palabras que contengan dichos <caracteres>
+like ‘%<caracteres>’ => busca todas las palabras que finalicen con dichos <caracteres>
+not like ’ ’ = > se usa igual que like pero con la diferencia de que ponemos lo que no queremos que busque
+
+add column => se usa para agregar un atributo a la columna de la tabla
+drop column => se usa para eliminar un atributo de la columna.
+
+update = actualizar una tabla
+set = dar nuevo titulo o nombre al momento de actualizar. especificandolo poniendolo entre ’ nombre_nuevo’
+where = elegir donde se desea cambiar o hacer el update. where column1 = fila2
